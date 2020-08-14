@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace AnrSite
 {
@@ -30,7 +31,8 @@ namespace AnrSite
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddLocalization(opts => { opts.ResourcesPath = "Resources"; });
+            
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -38,25 +40,24 @@ namespace AnrSite
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddRazorPages();
 
-            
+
+            services.AddRazorPages()
+            .AddViewLocalization(o => o.ResourcesPath = "Resources");
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
-                var culturesSupported = new[]
+                var cultures = new[]
                 {
-                    new CultureInfo("en"),
-                    new CultureInfo("fr"),
-                    new CultureInfo("ru"),
-                    new CultureInfo("de"),
-                    new CultureInfo("es"),
-                    new CultureInfo("en-US")
-                };
-                options.DefaultRequestCulture = new RequestCulture("fr");
-                options.SupportedCultures = culturesSupported;
-                options.SupportedUICultures = culturesSupported;
+                new CultureInfo("en"),
+                new CultureInfo("fr")
+            };
+
+             //   options.DefaultRequestCulture = new RequestCulture("fr");
+                options.SupportedCultures = cultures;
+                options.SupportedUICultures = cultures;
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,6 +74,9 @@ namespace AnrSite
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseRequestLocalization(
+            app.ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

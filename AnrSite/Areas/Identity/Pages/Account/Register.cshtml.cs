@@ -51,7 +51,7 @@ namespace AnrSite.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required(ErrorMessage = "The Password field is required")]
-            [StringLength(100, ErrorMessage = "The password must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "The Password must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }

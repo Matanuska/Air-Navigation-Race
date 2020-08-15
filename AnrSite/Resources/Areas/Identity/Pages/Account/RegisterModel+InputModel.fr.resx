@@ -132,10 +132,13 @@
   <data name="The E-mail field is required" xml:space="preserve">
     <value>Le champ "E-mail" est requis</value>
   </data>
+  <data name="The password and confirmation password do not match." xml:space="preserve">
+    <value>Le mot de passe ne correspond pas à sa confirmation.</value>
+  </data>
   <data name="The Password field is required" xml:space="preserve">
     <value>Le champ "Mot de passe" est requis</value>
   </data>
-  <data name="The password must be at least {2} and at max {1} characters long" xml:space="preserve">
-    <value>Le champ "{0}" doit contenir entre {1} et {2} caractères.</value>
+  <data name="The Password must be at least {2} and at max {1} characters long." xml:space="preserve">
+    <value>Le champ "{0}" doit contenir entre {2} et {1} caractères.</value>
   </data>
 </root>

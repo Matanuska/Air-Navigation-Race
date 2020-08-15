@@ -45,12 +45,14 @@ namespace AnrSite.Areas.Identity.Pages.Account
         {
             [Required]
             [EmailAddress]
+            [Display(Name = "Email")]
             public string Email { get; set; }
 
             [Required]
             [DataType(DataType.Password)]
-      //      [Display(Name = "foo", ResourceType = typeof(MyResources))]            
-            [Display(Name = "foo")]
+                
+            [Display(Name = "Password")]
+            [StringLength(8, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
             public string Password { get; set; }
 
             [Display(Name = "Remember me?")]

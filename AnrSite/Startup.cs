@@ -43,7 +43,8 @@ namespace AnrSite
 
 
             services.AddRazorPages()
-            .AddViewLocalization(o => o.ResourcesPath = "Resources");
+            .AddViewLocalization(o => o.ResourcesPath = "Resources")
+             .AddDataAnnotationsLocalization();
 
             services.Configure<RequestLocalizationOptions>(options =>
             {

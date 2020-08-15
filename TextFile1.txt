@@ -4,4 +4,5 @@ https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspn
 http://www.ziyad.info/en/articles/16-Localizing_DataAnnotations
 
 https://www.mikesdotnetting.com/article/347/localising-data-annotation-attributes-in-razor-pages
+https://blog.codingmilitia.com/2019/04/24/aspnet-018-from-zero-to-overkill-internationalization/
 

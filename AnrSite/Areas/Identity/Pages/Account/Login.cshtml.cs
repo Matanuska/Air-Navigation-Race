@@ -51,7 +51,7 @@ namespace AnrSite.Areas.Identity.Pages.Account
             [Required(ErrorMessage = "The Password field is required")]
             [DataType(DataType.Password)]                
             [Display(Name = "Password")]
-            [StringLength(8, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+            [StringLength(8, ErrorMessage = "The {0} length must be between {2} and {1}.", MinimumLength = 6)]
             public string Password { get; set; }
 
             [Display(Name = "Remember me?")]

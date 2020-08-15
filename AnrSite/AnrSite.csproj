@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Resources\Areas\Identity\Pages\Account\Manage\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,6 +54,13 @@
   <ItemGroup>
     <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\LoginModel+InputModel.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\Manage\ResetPassword+InputModel.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\RegisterModel+InputModel.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Pages\Index.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

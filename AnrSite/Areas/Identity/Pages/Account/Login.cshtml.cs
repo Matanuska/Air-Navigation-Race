@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System.ComponentModel;
 
 namespace AnrSite.Areas.Identity.Pages.Account
 {
@@ -48,6 +49,8 @@ namespace AnrSite.Areas.Identity.Pages.Account
 
             [Required]
             [DataType(DataType.Password)]
+      //      [Display(Name = "foo", ResourceType = typeof(MyResources))]            
+            [Display(Name = "foo")]
             public string Password { get; set; }
 
             [Display(Name = "Remember me?")]

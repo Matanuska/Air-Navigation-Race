@@ -22,6 +22,7 @@ namespace AnrSite.Areas.Identity.Pages.Account.Manage
             _signInManager = signInManager;
         }
 
+        [Display(Name = "Username")]
         public string Username { get; set; }
 
         [TempData]

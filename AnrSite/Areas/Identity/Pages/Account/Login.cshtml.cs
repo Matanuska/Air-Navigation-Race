@@ -43,14 +43,13 @@ namespace AnrSite.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = "The E-mail field is required")]
+            [EmailAddress(ErrorMessage = "The E-mail field is not a valid e-mail adress")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Required]
-            [DataType(DataType.Password)]
-                
+            [Required(ErrorMessage = "The Password field is required")]
+            [DataType(DataType.Password)]                
             [Display(Name = "Password")]
             [StringLength(8, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
             public string Password { get; set; }

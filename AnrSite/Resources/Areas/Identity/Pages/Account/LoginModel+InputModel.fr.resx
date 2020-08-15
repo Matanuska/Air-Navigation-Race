@@ -129,6 +129,15 @@
   <data name="Remember me?" xml:space="preserve">
     <value>Se souvenir de moi ?</value>
   </data>
+  <data name="The E-mail field is not a valid e-mail adress" xml:space="preserve">
+    <value>L'adresse E-mail n'est pas valide</value>
+  </data>
+  <data name="The E-mail field is required" xml:space="preserve">
+    <value>Le champ "E-mail" est requis</value>
+  </data>
+  <data name="The Password field is required" xml:space="preserve">
+    <value>Le champ "Mot de passe" est requis</value>
+  </data>
   <data name="{0} length must be between {2} and {1}." xml:space="preserve">
     <value>Le champ "{0}" doit contenir entre {1} et {2} caractères.</value>
   </data>

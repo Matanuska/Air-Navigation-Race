@@ -120,10 +120,16 @@
   <data name="Email" xml:space="preserve">
     <value>E-mail</value>
   </data>
+  <data name="foo" xml:space="preserve">
+    <value>bar</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Mot de passe</value>
   </data>
   <data name="Remember me?" xml:space="preserve">
     <value>Se souvenir de moi ?</value>
+  </data>
+  <data name="{0} length must be between {2} and {1}." xml:space="preserve">
+    <value>Le champ "{0}" doit contenir entre {1} et {2} caractères.</value>
   </data>
 </root>

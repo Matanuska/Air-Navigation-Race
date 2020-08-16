@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Your authenticator app key has been reset, you will need to configure your authenticator app using the new key." xml:space="preserve">
-    <value>Votre clé d'application d'authentification a été réinitialisée, vous devrez configurer votre application d'authentification à l'aide de la nouvelle clé.</value>
+  <data name="Error changing email." xml:space="preserve">
+    <value>Erreur lors de la modification de l'e-mail.</value>
+  </data>
+  <data name="Error changing user name." xml:space="preserve">
+    <value>Erreur lors de la modification du nom d'utilisateur.</value>
+  </data>
+  <data name="Thank you for confirming your email change." xml:space="preserve">
+    <value>Merci d'avoir confirmé votre changement d'e-mail.</value>
   </data>
 </root>

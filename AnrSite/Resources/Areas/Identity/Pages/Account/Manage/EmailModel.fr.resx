@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Confirm your email" xml:space="preserve">
+    <value>Confirmez votre e-mail</value>
+  </data>
+  <data name="Confirmation link to change email sent. Please check your email." xml:space="preserve">
+    <value>Lien de confirmation pour modifier l'e-mail envoyé. Merci de consulter vos e-mails.</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Adresse E-mail</value>
+  </data>
+  <data name="Verification email sent. Please check your email." xml:space="preserve">
+    <value>L'e-mail de vérification a été envoyé. Merci de consulter vos e-mails.</value>
+  </data>
+  <data name="Your email is unchanged." xml:space="preserve">
+    <value>Votre e-mail est inchangé.</value>
   </data>
 </root>

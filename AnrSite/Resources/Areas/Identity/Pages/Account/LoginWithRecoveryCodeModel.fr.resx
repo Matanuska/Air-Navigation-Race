@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Your authenticator app key has been reset, you will need to configure your authenticator app using the new key." xml:space="preserve">
-    <value>Votre clé d'application d'authentification a été réinitialisée, vous devrez configurer votre application d'authentification à l'aide de la nouvelle clé.</value>
+  <data name="Invalid recovery code entered." xml:space="preserve">
+    <value>Code de récupération saisi non valide.</value>
   </data>
 </root>

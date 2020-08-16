@@ -88,7 +88,7 @@ namespace AnrSite.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your password has been set.";
+            StatusMessage = _localizer["Your password has been set."];
 
             return RedirectToPage();
         }

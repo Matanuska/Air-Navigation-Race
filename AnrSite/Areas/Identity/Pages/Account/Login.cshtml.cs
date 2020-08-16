@@ -104,7 +104,7 @@ namespace AnrSite.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, _localizer["Invalid login attempt."]);
                     return Page();
                 }
             }

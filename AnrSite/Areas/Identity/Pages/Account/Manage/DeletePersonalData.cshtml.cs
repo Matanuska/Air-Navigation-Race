@@ -3,7 +3,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 
 namespace AnrSite.Areas.Identity.Pages.Account.Manage
@@ -13,15 +15,18 @@ namespace AnrSite.Areas.Identity.Pages.Account.Manage
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<DeletePersonalDataModel> _logger;
+        private readonly IStringLocalizer<DeletePersonalDataModel> _localizer;
 
         public DeletePersonalDataModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
-            ILogger<DeletePersonalDataModel> logger)
+            ILogger<DeletePersonalDataModel> logger,
+            IStringLocalizer<DeletePersonalDataModel> localizer)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
+            _localizer = localizer;
         }
 
         [BindProperty]
@@ -30,6 +35,7 @@ namespace AnrSite.Areas.Identity.Pages.Account.Manage
         public class InputModel
         {
             [Required]
+            [Display(Name = "Password")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
         }
@@ -60,8 +66,8 @@ namespace AnrSite.Areas.Identity.Pages.Account.Manage
             if (RequirePassword)
             {
                 if (!await _userManager.CheckPasswordAsync(user, Input.Password))
-                {
-                    ModelState.AddModelError(string.Empty, "Incorrect password.");
+                {                    
+                    ModelState.AddModelError(string.Empty, _localizer["Incorrect password."]);
                     return Page();
                 }
             }

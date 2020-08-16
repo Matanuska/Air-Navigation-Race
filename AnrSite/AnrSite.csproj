@@ -72,6 +72,15 @@
     <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\Manage\ChangePasswordModel.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\Manage\DeletePersonalData.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\Manage\DeletePersonalDataModel+InputModel.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\Manage\DeletePersonalDataModel.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Areas\Identity\Pages\Account\Manage\Email.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>

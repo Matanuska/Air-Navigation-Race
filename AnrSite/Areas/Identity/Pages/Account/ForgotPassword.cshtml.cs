@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Localization;
 
 namespace AnrSite.Areas.Identity.Pages.Account
 {
@@ -18,11 +19,13 @@ namespace AnrSite.Areas.Identity.Pages.Account
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IEmailSender _emailSender;
+        private readonly IStringLocalizer<ForgotPasswordModel> _localizer;
 
-        public ForgotPasswordModel(UserManager<IdentityUser> userManager, IEmailSender emailSender)
+        public ForgotPasswordModel(UserManager<IdentityUser> userManager, IEmailSender emailSender, IStringLocalizer<ForgotPasswordModel> localizer)
         {
             _userManager = userManager;
             _emailSender = emailSender;
+            _localizer = localizer;
         }
 
         [BindProperty]

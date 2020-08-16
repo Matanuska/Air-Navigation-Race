@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Localization;
 
 namespace AnrSite.Areas.Identity.Pages.Account
 {
@@ -14,11 +15,13 @@ namespace AnrSite.Areas.Identity.Pages.Account
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IEmailSender _sender;
+        private readonly IStringLocalizer<RegisterConfirmationModel> _localizer;
 
-        public RegisterConfirmationModel(UserManager<IdentityUser> userManager, IEmailSender sender)
+        public RegisterConfirmationModel(UserManager<IdentityUser> userManager, IEmailSender sender,IStringLocalizer<RegisterConfirmationModel> localizer)
         {
             _userManager = userManager;
             _sender = sender;
+            _localizer = localizer;
         }
 
         public string Email { get; set; }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 
 namespace AnrSite.Areas.Identity.Pages.Account.Manage
@@ -16,15 +17,18 @@ namespace AnrSite.Areas.Identity.Pages.Account.Manage
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<TwoFactorAuthenticationModel> _logger;
+        private readonly IStringLocalizer<TwoFactorAuthenticationModel> _localizer;
 
         public TwoFactorAuthenticationModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
-            ILogger<TwoFactorAuthenticationModel> logger)
+            ILogger<TwoFactorAuthenticationModel> logger,
+            IStringLocalizer<TwoFactorAuthenticationModel> localizer)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
+            _localizer = localizer;
         }
 
         public bool HasAuthenticator { get; set; }

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Localization;
 
 namespace AnrSite.Areas.Identity.Pages.Account
 {
@@ -15,10 +16,12 @@ namespace AnrSite.Areas.Identity.Pages.Account
     public class ConfirmEmailModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly IStringLocalizer<ConfirmEmailModel> _localizer;
 
-        public ConfirmEmailModel(UserManager<IdentityUser> userManager)
+        public ConfirmEmailModel(UserManager<IdentityUser> userManager, IStringLocalizer<ConfirmEmailModel> localizer)
         {
             _userManager = userManager;
+            _localizer = localizer;
         }
 
         [TempData]

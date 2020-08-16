@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 
 namespace AnrSite.Areas.Identity.Pages.Account.Manage
@@ -13,13 +14,16 @@ namespace AnrSite.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<GenerateRecoveryCodesModel> _logger;
+        private readonly IStringLocalizer<GenerateRecoveryCodesModel> _localizer;
 
         public GenerateRecoveryCodesModel(
             UserManager<IdentityUser> userManager,
-            ILogger<GenerateRecoveryCodesModel> logger)
+            ILogger<GenerateRecoveryCodesModel> logger,
+            IStringLocalizer<GenerateRecoveryCodesModel> localizer)
         {
             _userManager = userManager;
             _logger = logger;
+            _localizer = localizer;
         }
 
         [TempData]

@@ -1,5 +1,4 @@
-﻿using AnrSite.Models;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 
@@ -11,7 +10,7 @@ namespace AnrSite.Data
         {
             using (var scope = host.Services.CreateScope())
             {
-                using (var appContext = scope.ServiceProvider.GetRequiredService<ApplicationContext>())
+                using (var appContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>())
                 {
                     try
                     {

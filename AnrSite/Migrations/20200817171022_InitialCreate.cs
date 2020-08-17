@@ -190,6 +190,38 @@ namespace AnrSite.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            var id_userrole = Guid.NewGuid().ToString();
+            var id_creatorrole = Guid.NewGuid().ToString();
+            var id_adminrole = Guid.NewGuid().ToString();
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "Name", "NormalizedName" },
+                values: new object[] { id_userrole , "Users", "USERS"}
+                );
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "Name", "NormalizedName" },
+                values: new object[] { id_creatorrole, "Creators", "CREATORS" }
+                );
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "Name", "NormalizedName" },
+                values: new object[] { id_adminrole, "Administrators", "ADMINISTRATORS" }
+                );
+
+            var id_user = Guid.NewGuid().ToString();
+            // P@ssW0rd
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "UserName", "NormalizedUserName", "Email", "NormalizedEmail", "EmailConfirmed", "PasswordHash", "SecurityStamp", "ConcurrencyStamp", "PhoneNumber", "PhoneNumberConfirmed", "TwoFactorEnabled", "LockoutEnabled", "AccessFailedCount" },
+                values: new object[] { id_user, "admin@site.com", "ADMIN@SITE.COM", "admin@site.com", "ADMIN@SITE.COM", true, "AQAAAAEAACcQAAAAEOPAhwBLSzObugRfQ5EZS7UVxXwQ8DaP6HZSEMYQhhkfHT3bgLI3Hql0JM8qE5ouUA==", "6CJXN57WIUQFA472TF6DI7XZTOLMCZJW", "3aefc506-f273-49dd-a8bf-62c7c75c2b0c", null, false, false, null, true, 0 }
+                );
+
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

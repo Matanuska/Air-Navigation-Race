@@ -14,7 +14,7 @@ namespace AnrSite.Data
                 {
                     try
                     {
-                        appContext.Database.Migrate();
+                        //appContext.Database.Migrate();
                     }
                     catch (Exception ex)
                     {

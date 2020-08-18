@@ -42,6 +42,9 @@ namespace AnrSite.Areas.Identity.Pages.Account
 
             code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
             var result = await _userManager.ConfirmEmailAsync(user, code);
+            if (result.Succeeded) { 
+                await _userManager.AddToRoleAsync(user, "Users");
+            }            
             StatusMessage = result.Succeeded ? _localizer["Thank you for confirming your email."] : _localizer["Error confirming your email."];
             return Page();
         }

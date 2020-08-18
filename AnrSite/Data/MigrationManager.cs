@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 
@@ -14,7 +15,7 @@ namespace AnrSite.Data
                 {
                     try
                     {
-                        //appContext.Database.Migrate();
+                        appContext.Database.Migrate();
                     }
                     catch (Exception ex)
                     {

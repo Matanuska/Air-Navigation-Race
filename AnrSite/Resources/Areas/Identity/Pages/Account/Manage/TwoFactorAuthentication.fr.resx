@@ -120,6 +120,9 @@
   <data name="Add authenticator app" xml:space="preserve">
     <value>Ajouter une application d'authentification</value>
   </data>
+  <data name="Authenticator app" xml:space="preserve">
+    <value />
+  </data>
   <data name="Disable 2FA" xml:space="preserve">
     <value>Désactiver 2FA</value>
   </data>
@@ -140,6 +143,9 @@
   </data>
   <data name="Setup authenticator app" xml:space="preserve">
     <value>Configurer l'application d'authentification</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Application d'authentification</value>
   </data>
   <data name="Two-factor authentication (2FA)" xml:space="preserve">
     <value>Authentification à deux facteurs (2FA)</value>
